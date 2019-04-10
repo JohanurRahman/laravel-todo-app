@@ -13,5 +13,18 @@
     <hr>
 
     <p>{{ $todo->body }}</p>
+
+    <br><br>
+
+    <a class="btn btn-primary" href="/todo/{{ $todo->id }}/edit">Edit</a>
+
+    <form method="POST" action="{{ action('TodosController@destroy', $todo->id) }}">
+
+        @csrf
+        @method('DELETE')
+        <button class="btn btn-danger">Delete</button>
+
+    </form>
+
     
 @endsection

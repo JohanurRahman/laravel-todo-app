@@ -11,7 +11,7 @@
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="{{Request::is('/') ? 'active': '' }}">
-                <a class="nav-link" href="todo/create">Create Todo</a>
+            <a class="nav-link" href="{{ url('todo/create') }}">Create Todo</a>
             </li>
         </ul>
     </div>
